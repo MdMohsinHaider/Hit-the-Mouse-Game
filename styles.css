@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body, html {
+    height: 100%;
+    background-color: #f0f8ff;
+}
+#game-container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #d0eaff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+h1 {
+    margin-bottom: 15px;
+    color: #0a3d62;
+}
+#score-board {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2d3436;
+}
+#game-area {
+    position: relative;
+    background-color: #81ecec;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+#start-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #0984e3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#start-btn:hover {
+    background-color: #74b9ff;
+}
+.mouse {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    /* border: thick double #270000; */
+    border: solid 2px black;
+}
+
+/* Responsive styles for various screen sizes */
+
+/* Smallest devices (up to 320px wide) */
+@media only screen and (max-width: 320px) {
+    #game-container {
+        margin: 10px;
+        padding: 15px;
+    }
+    #game-area {
+        height: 280px;
+    }
+    .mouse {
+        width: 35px;
+        height: 35px;
+    }
+    #start-btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Small TVs and small screens (up to 480px) */
+@media only screen and (max-width: 480px) {
+    #game-area {
+        height: 220px;
+    }
+    .mouse {
+        width: 40px;
+        height: 40px;
+    }
+    #start-btn {
+        font-size: 0.9rem;
+    }
+}
+
+/* Medium TVs and tablets (481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    #game-area {
+        height: 280px;
+    }
+    .mouse {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Large TVs (769px to 1200px) */
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    #game-area {
+        height: 320px;
+    }
+    .mouse {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* Largest TVs (1201px and larger) */
+@media only screen and (min-width: 1201px) {
+    #game-area {
+        height: 400px;
+    }
+    .mouse {
+        width: 70px;
+        height: 70px;
+    }
+}
